@@ -1,18 +1,6 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LifePilot CZE</title>
-</head>
-<body>
-  <h1>Vítejte na LifePilot CZE!</h1>
-  <p>Web bude brzy spuštěn.</p>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="cs">
-<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Registrace | LifePilot CZE</title>
@@ -20,49 +8,36 @@
     body {
       font-family: Arial, sans-serif;
       padding: 2rem;
-      background-color: #f9f9f9;
-    }
-    h1 {
-      color: #333;
+      background-color: #f4f4f4;
     }
     form {
-      background: #fff;
+      background: white;
       padding: 2rem;
       border-radius: 8px;
       max-width: 400px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      margin: auto;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
     input, button {
       width: 100%;
       padding: 10px;
-      margin: 10px 0;
-      font-size: 1rem;
+      margin-top: 10px;
     }
-    .success-message {
-      color: green;
-      display: none;
+    .info {
+      text-align: center;
+      margin-top: 1rem;
     }
   </style>
 </head>
 <body>
   <h1>Registrace na LifePilot CZE</h1>
-  <form id="registerForm">
-    <input type="text" placeholder="Jméno" required />
-    <input type="email" placeholder="Email" required />
-    <input type="password" placeholder="Heslo" required />
+  <form action="https://formsubmit.co/tvůj-email@example.com" method="POST">
+    <input type="text" name="Jméno" placeholder="Jméno" required>
+    <input type="email" name="Email" placeholder="Email" required>
+    <input type="password" name="Heslo" placeholder="Heslo" required>
+    <input type="hidden" name="_subject" value="Nová registrace!">
     <button type="submit">Registrovat</button>
-    <p class="success-message" id="successMsg">Děkujeme za registraci!</p>
   </form>
-
-  <script>
-    const form = document.getElementById('registerForm');
-    const successMsg = document.getElementById('successMsg');
-
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      successMsg.style.display = 'block';
-      form.reset();
-    });
-  </script>
+  <div class="info">Data budou odeslána přímo na tvůj e-mail.</div>
 </body>
 </html>
